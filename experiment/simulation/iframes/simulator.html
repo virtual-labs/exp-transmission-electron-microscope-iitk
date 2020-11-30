@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <link rel="stylesheet" href="../css/task.css">
+</head>
+
+<body>
+    <div class="container-fluid main-wrapper" id="showsim">
+        <div class="row lcontrol">
+            <div class="col">
+                <div class="panel">
+                    <center>
+                        <div class="btn-group btn-group-lg align-self-center scenes" role="group" aria-label="Basic example">
+                            <button type="button" data-mode="1" class="btn btn-primary active">TEM Introduction</button>
+                            <!-- <button type="button" data-mode="2" class="btn btn-primary">BSE Mode</button> -->
+                        </div>
+                    </center>
+                </div>
+            </div>
+        </div>
+        <div class="row ucontrol">
+            <div class="col-3">
+                <div class="panel mb-1">
+                    <div class="panel-head">
+                        Instructions
+                    </div>
+                    <div id="typer">
+                    </div>
+                </div>
+                <div class="panel padd">
+                    <button id="st" class="but sm w-100 blue" onclick="strt(); this.onclick=null;">Switch On</button>
+
+                    <br>
+                    <br>
+                    <label for="input">Choose Mode: </label>
+                    <select onchange="change()" id="position" disabled>
+                        <option value="1">Imaging mode</option>
+                        <option value="2">Diffraction mode</option>
+                    </select><br>
+                    <br> Available Materials:
+                    <div class="row materials mt-2" disabled>
+                        <div data-mid="0" class="col-sm-2 col-md-4 material">
+                            <img src="../images/Slide38.JPG" class="img-thumbnail img-fluid" /> Metal
+                        </div>
+                        <div data-mid="1" class="col-sm-2 col-md-4 material">
+                            <img src="../images/Slide38.JPG" class="img-thumbnail img-fluid" /> Ceramic
+                        </div>
+                        <div data-mid="2" class="col-sm-2 col-md-4 material">
+                            <img src="../images/Slide38.JPG" class="img-thumbnail img-fluid" /> Hair
+                        </div>
+                    </div>
+
+                    <div class="form-group mt-4">
+                        <label for="formControlRange" disabled>Vaccum (in kv)</label>
+                        <div class="row">
+                            <div class="col-9">
+                                <div id="vslider" class="mt-3">
+                                    <div class="custom-handle ui-slider-handle" style="    padding: 0px;"></div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <button id="setvac" class="btn btn-primary w-100" disabled>Set</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mt-4">
+                        <label for="formControlRange">Accelerating voltage (in kv)</label>
+                        <div class="row">
+                            <div class="col-9">
+                                <div id="avslider" class="mt-3">
+                                    <div class="custom-handle ui-slider-handle" style="    padding: 0px;"></div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <button id="setav" class="btn btn-primary w-100" disabled>Set</button>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <button id="on" class="but sm w-100 green" disabled>Beam On</button>
+
+
+
+
+
+                    <!-- <div class="form-group mt-4">
+                        <label for="formControlRange">Brightness</label>
+                        <div id="bslider" class="mt-3">
+                            <div class="custom-handle ui-slider-handle"></div>
+                        </div>
+                    </div>
+                    <div class="form-group mt-4">
+                        <label for="formControlRange">Contrast</label>
+                        <div id="cslider" class="mt-3">
+                            <div class="custom-handle ui-slider-handle"></div>
+                        </div>
+                    </div> 
+                    <button id="task" class="but sm w-100 blue mt-2" disabled="true">Task</button>-->
+                    <button class="btn btn-danger w-100 mt-2" onclick="location.reload()">Reset</button>
+                </div>
+            </div>
+
+
+
+            <!-- taskpart -->
+            <div class="col-3">
+                <div class="panel" style="background:#444;position: relative;height: 52rem;">
+                    <!-- <img class="w-100" src="./images/micro.jpg" /> -->
+
+                    <!-- <img data-id="8" onclick="openPartModal(this)" src="./images/parts/8.png" class="part"
+                        style="top:3%; width:11rem;" /> -->
+                    <img data-id="9" src="../img/tem_back_1.png" class="part a" style="top: 8%;
+                        width: 18rem; 
+                        left: 50%;
+                        height: 45rem;" />
+                    <img data-id="1" data-toggle="tooltip" data-placement="right" title="Gun" src="../images/parts/1.png" class="part" style="top:11%; width:4rem;left: 50%;" />
+                    <img data-id="2" data-toggle="tooltip" data-placement="right" title="Gun Deflector" src="../images/parts/2.png" class="part" style="top:19%; width:2.5rem; left: 50%;" />
+                    <img data-id="3" data-toggle="tooltip" data-placement="right" title="Condensor Lens 1" src="../images/parts/3.png" class="part" style="top:24%; width: 3rem;left: 50%;" />
+                    <img data-id="4" data-toggle="tooltip" data-placement="right" title="Condensor Lens 2" src="../images/parts/4.png" class="part" style="top:28%; width:4rem;left: 50%;" />
+                    <img data-id="5" data-toggle="tooltip" data-placement="right" title="Objective Stigmator" src="../images/parts/5.png" class="part" style="top:53%; width:5.5rem;height: 3rem;left: 50%;" />
+                    <img data-id="4" data-toggle="tooltip" data-placement="right" title="Objective lens Upper" src="../images/parts/4.png" class="part" style="top:57%; width:4rem;left: 50%;" />
+                    <img data-id="4" data-toggle="tooltip" data-placement="right" title="Objective lens Lower" src="../images/parts/4.png" class="part" style="top:63%; width:4rem;left: 50%;" />
+                    <img data-id="3" data-toggle="tooltip" data-placement="right" title="Intermediate Lens" src="../images/parts/3.png" class="part" style="top:65%; width:3rem;left: 50%;" />
+                    <img data-id="3" data-toggle="tooltip" data-placement="right" title="Project Lens 1" src="../images/parts/3.png" class="part" style="top:70%; width:3rem;left: 50%;" />
+                    <img data-id="5" data-toggle="tooltip" data-placement="right" title="Project Lens 2" src="../images/parts/5.png" class="part" style="top:75%; width:5.5rem;height: 3rem;left: 50%;" />
+                    <!-- <svg height="50" width="80"> 
+                        <ellipse cx="40" cy="30" rx="35" ry="20" style="fill:lime" /> not supported
+                      </svg> -->
+                    <div id="dropzone" class="active" style="display: none;">
+                    </div>
+                    <svg height="50" width="80" style="left: 42%; margin-top: 42rem; position: absolute;"> 
+                        <ellipse cx="40" cy="30" rx="30" ry="15" style="fill:silver"></ellipse> not supported
+                      </svg>
+
+
+                    <script>
+                        var inp = $("#position :selected").val();
+                        let i = 0;
+
+                        function change() {
+                            if (inp == 1) {
+                                document.getElementById("dropzone").style.marginTop = "5%";
+                            } else {
+                                document.getElementById("dropzone").style.marginTop = "15%";
+                            }
+                        }
+                    </script>
+                    <!-- <canvas id="beam2" width="256" height='80'
+                        style="position:absolute;top:40%;left:50%;transform:translateX(-50%);background:none;"></canvas> -->
+                    <canvas id="beam" width="15" height='480' style="position:absolute;top:18%;left:50%;transform:translateX(-50%);
+                   "></canvas>
+                    <canvas id="beam2" width="256" height='80' style="display: none;position:absolute;top: 81%;
+                    left: 50%;transform:translateX(-50%);background:none;"></canvas>
+
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="row mb-1">
+                    <div class="col-12" id="output">
+                        <div class="panel padd">
+                            <figure data-zoom data-zoom-max="5">
+                                <img id="outImage1" style="display: none;" class="w-100" src="../images/imagem.jpg" />
+                            </figure>
+                            <figure data-zoom data-zoom-max="5">
+                                <img id="outImage2" style="display: none;" class="w-100" src="../images/diffractm.jpg" />
+                            </figure>
+
+                        </div>
+                    </div>
+                    <div class="col-12" id="taskArea">
+                        <div class="panel padd">
+                            <center>
+                                <h2>TASK</h2>
+                            </center>
+                            <br /> Select the most appropiate image obtained when accelerating voltage is set at X at <b>BSE
+                                Mode</b>.
+                            <div class="row mt-3">
+                                <div class="input-group mb-3 col-6">
+                                    <label>
+                                        <input value="0" type="radio" name="task"
+                                            aria-label="Checkbox for following text input">
+                                        <img class="img-thumbnail" src="../images/Slide22.JPG">
+                                    </label>
+                                </div>
+                                <div class="input-group mb-3 col-6">
+                                    <label>
+                                        <input value="1" type="radio" name="task"
+                                            aria-label="Checkbox for following text input">
+                                        <img class="img-thumbnail" src="../images/Slide22.JPG">
+                                    </label>
+                                </div>
+                                <div class="input-group mb-3 col-6">
+                                    <label>
+                                        <input value="2" type="radio" name="task"
+                                            aria-label="Checkbox for following text input">
+                                        <img class="img-thumbnail" src="../images/Slide22.JPG">
+                                    </label>
+                                </div>
+                                <div class="input-group mb-3 col-6">
+                                    <label>
+                                        <input value="3" type="radio" name="task"
+                                            aria-label="Checkbox for following text input">
+                                        <img class="img-thumbnail" src="../images/Slide22.JPG">
+                                    </label>
+                                </div>
+                            </div>
+                            <button class="but sm w-100 blue mt-2 mb-3" onclick="taskSubmit()">Submit</button>
+                        </div>
+                    </div>
+                </div>
+                <button id="showTask" class="but sm w-100 green" onclick="showtsk()">Go to task page</button>
+                <button id="btn_class" onclick="changeiframe()">
+                    Calculate Wavelength
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+    <!--task-->
+
+    <div class="container-fluid main-wrapper" style="display:none;" id="shtsk">
+        <div class="row lcontrol">
+            <div class="col">
+                <div class="panel">
+                    <center>
+                        <div class="btn-group btn-group-lg align-self-center scenes" role="group" aria-label="Basic example">
+                            <button type="button" data-mode="1" class="btn btn-primary active">TEM Task</button>
+                        </div>
+                    </center>
+                </div>
+            </div>
+        </div>
+        <div class="row ucontrol" id="container2">
+            <div class="col-3">
+                <div class="panel mb-1">
+                    <div class="panel-head">
+                        Instructions
+                    </div>
+                    <div id="typer" style="word-wrap: break-word;">
+                        Now align all the parts on their respective position to complete the simulator.
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="panel">
+                    <form>
+                        <ul id="sortable1" class="connectedSortable">
+                            <!-- 1 -->
+                            <li class="ui-state-default" id="1"><img src="../img/1.png" alt="1" style="height: 2rem;width: 4rem;left: 50%;">
+                                <p style="margin-left: 5rem;margin-top: -2rem;color: coral;white-space: nowrap">Gun</p>
+                            </li><br>
+                            <!-- 10 -->
+                            <li class="ui-state-default" id="10"><img src="../img/5.png" alt="9" style="height: 2rem;width: 4rem;left: 50%;">
+                                <p style="margin-left: 5rem;margin-top: -2rem;color: coral;white-space: nowrap">Project lens 2</p>
+                            </li><br>
+                            <!-- 3 -->
+                            <li class="ui-state-default" id="3"><img src="../img/3.png" alt="3" style="height: 2rem;width: 4rem;left: 50%;">
+                                <p style="margin-left: 5rem;margin-top: -2rem;color: coral;white-space: nowrap">Condensor Lens 1</p>
+                            </li><br>
+                            <!-- 4 -->
+                            <li class="ui-state-default" id="4"><img src="../img/4.png" alt="4" style="height: 2rem;width: 4rem;left: 50%;">
+                                <p style="margin-left: 5rem;margin-top: -2rem;color: coral; white-space: nowrap">Condensor Lens 2</p>
+                            </li><br>
+                            <!-- 2 -->
+                            <li class="ui-state-default" id="2"><img src="../img/2.png" alt="2" style="height: 2rem;width: 3rem;left: 50%;">
+                                <p style="margin-left: 5rem;margin-top: -2rem;color: coral;white-space: nowrap">Gun Deflector</p>
+                            </li><br>
+
+                            <!-- 6 -->
+                            <li class="ui-state-default" id="6"><img src="../img/4.png" alt="6" style="height: 2rem;width: 4rem;left: 50%;">
+                                <p style="margin-left: 5rem;margin-top: -2rem;color: coral;white-space: nowrap">Objective lens Upper</p>
+                            </li><br>
+                            <!-- 7 -->
+                            <li class="ui-state-default" id="7"><img src="../img/4.png" alt="7" style="height: 2rem;width: 4rem;left: 50%;">
+                                <p style="margin-left: 5rem;margin-top: -2rem;color: coral;white-space: nowrap">Objective lens lower</p>
+                            </li><br>
+                            <!-- 5 -->
+                            <li class="ui-state-default" id="5"><img src="../img/5.png" alt="5" style="height: 2rem;width: 4rem;left: 50%;">
+                                <p style="margin-left: 5rem;margin-top: -2rem;color: coral;white-space: nowrap">Objective Stigmator</p>
+                            </li><br>
+                            <!-- 8 -->
+                            <li class="ui-state-default" id="8"><img src="../img/3.png" alt="8" style="height: 2rem;width: 4rem;left: 50%;">
+                                <p style="margin-left: 5rem;margin-top: -2rem;color: coral;white-space: nowrap">Intermediate Lens</p>
+                            </li><br>
+                            <!-- 9 -->
+                            <li class="ui-state-default" id="9"><img src="../img/3.png" alt="9" style="height: 2rem;width: 4rem;left: 50%;">
+                                <p style="margin-left: 5rem;margin-top: -2rem;color: coral;white-space: nowrap">Project lens 1</p>
+                            </li><br>
+
+                        </ul>
+                    </form>
+                    <button class="but sm w-100 green" onclick="chk()">Verify</button>
+                </div>
+
+            </div>
+            <div class="col-6">
+                <div class="panel" style=" background: #444;position: relative;height: 52rem;">
+
+                    <img data-id="9" src="../img/tem_back_1.png" class="part a" style="top: 7%;
+                    width: 18rem; 
+                    left: 50%;
+                    height: 45rem;
+                    position: inherit;" />
+                    <div>
+                        <ul id="sortable2" style="min-height: 5rem;
+                            left: 41%;
+                            top: 7%;
+                        position: absolute;
+                        z-index: 5;" class="connectedSortable">
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <div id="dropzone">
+                        </div>
+
+                        <!-- <canvas id="beam" width="15" height='480' style="position:absolute;top:12%;left:50%; background:none;"></canvas> -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="part-modal" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered justify-content-center" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img id="part-img" src="./images/parts/1.png" />
+                        <p class="mt-5">
+                            <b>Description:</b> <span id="part-desc">This part is used to do something, something
+                                something.
+                                Something something.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="toast-wrapper" aria-live="polite" aria-atomic="true" style="position:fixed; right:1rem;">
+        </div>
+    </div>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/zoom.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/task.js"></script>
+    <script>
+        function changeiframe() {
+            window.location = './calc.html';
+        }
+    </script>
+</body>
+
+</html>
