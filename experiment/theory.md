@@ -32,6 +32,6 @@ When the aperture is placed at the back-focal plane of objective lens, a bright 
 <img src="images/fig3.PNG"><br>
 Fig. 4: a) Bright field image and b) selected area diffraction for a ceramic sample in transmission electron microscopy. <br>
 <video width="320" height="240" controls>
-  <source src="exp1-sembasics.mp4" type="video/mp4">
+  <source src="exp5-tem.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video><br>Video on Basic operations of Transmission Electron Microscope (Imaging and Diffraction Pattern)
