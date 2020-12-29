@@ -1,6 +1,17 @@
 <b>TEM Instrumentation:</b><br><br>
-Transmission electron microscope (TEM) is a very strong tool to obtain microstructural and sub-microstructural information, along with the corresponding atomic orientation from diffraction pattern of the crystals. The resolution of TEM is to the tune of ~0.1 nm. The sample preparation is very tedious and is explained in an earlier experiment. In summary, sample must be transparent, Figure 1, to electrons in order for its imaging and obtaining phase-orientation information. The TEM directs incident electron beam on the sample, but the resulting signal is captured after the electron beam has interacted and passes through the sample, Figure 2. For transmitted electrons, the sample must be thin enough to allow passage of electrons through the sample. Herein, again, electron can be transmitted without any interaction or can also be elastically scattered or inelastically scattered. 
-
+<div><div style="float:left;width:55%;text-align: justify;text-justify: inter-word; margin-right:40px;">Transmission electron microscope (TEM) is a very strong tool to obtain microstructural and sub-microstructural information, along with the corresponding atomic orientation from diffraction pattern of the crystals. The resolution of TEM is to the tune of ~0.1 nm. The sample preparation is very tedious and is explained in an earlier experiment. In summary, sample must be transparent, Figure 1, to electrons in order for its imaging and obtaining phase-orientation information. The TEM directs incident electron beam on the sample, but the resulting signal is captured after the electron beam has interacted and passes through the sample, Figure 2. For transmitted electrons, the sample must be thin enough to allow passage of electrons through the sample. Herein, again, electron can be transmitted without any interaction or can also be elastically scattered or inelastically scattered. </div>
+<!-- <video width="320" height="240" controls>
+  <source src="exp5-tem.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video><br>Video on Basic operations of Transmission Electron Microscope (Imaging and Diffraction Pattern) -->
+<div style="float:left;width:40%;border: solid 1 px black;">
+<video width="320" height="240" controls>
+  <source src="images/exp3-conducting_insulating.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video><br>Video on Effect of Beam voltage on conducting and insulating samples</div>
+</div>
+<div style="content: '.';clear: both;display: block;height: 0;visibility: hidden;"></div>
+<div style ="text-align: justify;text-justify: inter-word;">
  <img src="images/tem1.PNG"><br>
 Fig 1: summary of various signals obtained by interaction of electrons with matter in an electron microscope.<br><br>
 <b>Instrumentation and Importance of Filament, Voltage and Vacuum: </b>
@@ -30,8 +41,4 @@ The ray-diagram for the TEM is presented in Figure 3. TEM can produce images, wh
 Figure 3: Ray-diagram eliciting the placement of aperture in obtaining image (left figure) or diffraction pattern (right figure).<br><br>
 When the aperture is placed at the back-focal plane of objective lens, a bright field image is resulted (Fig. 4a), whereas when the aperture is placed at image plan of objective lens, the diffraction pattern results. Note that the diffraction can be taken from a selected area (Fig. 4b) called selected area diffraction). The diffraction can show a certain pattern (i.e. individual spots from a single-crystal region, or rings arising from nanocrystalline region, or scattered overlapping spots from a few different crystals). Note that the bright field images show bright field (and features appear dark), and the units of length (to the typical tune of nm) is obtained (Fig. 4a). Whereas, the diffraction image is obtained in the reciprocal space (so the units of 1/nm) are observed. The pattern changes depending upon how the electron beam interacts with the matter and how many crystals interact to provide the resulting image. The symmetry of the real crystal decides the final pattern obtained in the diffraction image. A detailed analysis of those will be taken up in another experiment.  <br>
 <img src="images/fig3.PNG"><br>
-Fig. 4: a) Bright field image and b) selected area diffraction for a ceramic sample in transmission electron microscopy. <br>
-<video width="320" height="240" controls>
-  <source src="exp5-tem.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video><br>Video on Basic operations of Transmission Electron Microscope (Imaging and Diffraction Pattern)
+Fig. 4: a) Bright field image and b) selected area diffraction for a ceramic sample in transmission electron microscopy. <br></div>
