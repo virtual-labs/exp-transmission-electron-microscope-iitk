@@ -6,9 +6,9 @@
 </video><br>Video on Basic operations of Transmission Electron Microscope (Imaging and Diffraction Pattern) -->
 <div style="float:left;width:40%;border: solid 1 px black;">
 <video width="320" height="240" controls>
-  <source src="images/exp3-conducting_insulating.mp4" type="video/mp4">
+  <source src="images/exp5-tem.mp4" type="video/mp4">
   Your browser does not support the video tag.
-</video><br>Video on Effect of Beam voltage on conducting and insulating samples</div>
+</video><br>Video on Basic operations of Transmission Electron Microscope (Imaging and Diffraction Pattern)</div>
 </div>
 <div style="content: '.';clear: both;display: block;height: 0;visibility: hidden;"></div>
 <div style ="text-align: justify;text-justify: inter-word;">
