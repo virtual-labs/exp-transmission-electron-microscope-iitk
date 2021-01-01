@@ -61,7 +61,7 @@
                         <div class="row">
                             <div class="col-9">
                                 <div id="vslider" class="mt-3">
-                                    <div class="custom-handle ui-slider-handle" style="    padding: 0px;"></div>
+                                    <div class="custom-handle ui-slider-handle" style="padding: 0px;"></div>
                                 </div>
                             </div>
                             <div class="col-3">
@@ -73,9 +73,12 @@
                         <label for="formControlRange">Accelerating voltage (in kv)</label>
                         <div class="row">
                             <div class="col-9">
+                                <!-- <p id="voltagetext2">100 kv</p> -->
                                 <div id="avslider" class="mt-3">
-                                    <div class="custom-handle ui-slider-handle" style="    padding: 0px;"></div>
+
+                                    <div class="custom-handle ui-slider-handle" style=" padding: 0px;"></div>
                                 </div>
+
                             </div>
                             <div class="col-3">
                                 <button id="setav" class="btn btn-primary w-100" disabled>Set</button>
@@ -85,23 +88,6 @@
                     <br>
                     <button id="on" class="but sm w-100 green" disabled>Beam On</button>
 
-
-
-
-
-                    <!-- <div class="form-group mt-4">
-                        <label for="formControlRange">Brightness</label>
-                        <div id="bslider" class="mt-3">
-                            <div class="custom-handle ui-slider-handle"></div>
-                        </div>
-                    </div>
-                    <div class="form-group mt-4">
-                        <label for="formControlRange">Contrast</label>
-                        <div id="cslider" class="mt-3">
-                            <div class="custom-handle ui-slider-handle"></div>
-                        </div>
-                    </div> 
-                    <button id="task" class="but sm w-100 blue mt-2" disabled="true">Task</button>-->
                     <button class="btn btn-danger w-100 mt-2" onclick="location.reload()">Reset</button>
                 </div>
             </div>
@@ -111,10 +97,7 @@
             <!-- taskpart -->
             <div class="col-3">
                 <div class="panel" style="background:#444;position: relative;height: 52rem;">
-                    <!-- <img class="w-100" src="./images/micro.jpg" /> -->
 
-                    <!-- <img data-id="8" onclick="openPartModal(this)" src="./images/parts/8.png" class="part"
-                        style="top:3%; width:11rem;" /> -->
                     <img data-id="9" src="../img/tem_back_1.png" class="part a" style="top: 8%;
                         width: 18rem; 
                         left: 50%;
@@ -129,28 +112,11 @@
                     <img data-id="3" data-toggle="tooltip" data-placement="right" title="Intermediate Lens" src="../images/parts/3.png" class="part" style="top:65%; width:3rem;left: 50%;" />
                     <img data-id="3" data-toggle="tooltip" data-placement="right" title="Project Lens 1" src="../images/parts/3.png" class="part" style="top:70%; width:3rem;left: 50%;" />
                     <img data-id="5" data-toggle="tooltip" data-placement="right" title="Project Lens 2" src="../images/parts/5.png" class="part" style="top:75%; width:5.5rem;height: 3rem;left: 50%;" />
-                    <!-- <svg height="50" width="80"> 
-                        <ellipse cx="40" cy="30" rx="35" ry="20" style="fill:lime" /> not supported
-                      </svg> -->
+                    <img data-id="5" data-toggle="tooltip" data-placement="right" title="Projection Screen" src="../images/parts/disk.png" class="part" style="top:81%; width:5.5rem;height: 4rem;left: 50%;" />
+
                     <div id="dropzone" class="active" style="display: none;">
                     </div>
-                    <svg height="50" width="80" style="left: 42%; margin-top: 42rem; position: absolute;"> 
-                        <ellipse cx="40" cy="30" rx="30" ry="15" style="fill:silver"></ellipse> not supported
-                      </svg>
 
-
-                    <script>
-                        var inp = $("#position :selected").val();
-                        let i = 0;
-
-                        function change() {
-                            if (inp == 1) {
-                                document.getElementById("dropzone").style.marginTop = "5%";
-                            } else {
-                                document.getElementById("dropzone").style.marginTop = "15%";
-                            }
-                        }
-                    </script>
                     <!-- <canvas id="beam2" width="256" height='80'
                         style="position:absolute;top:40%;left:50%;transform:translateX(-50%);background:none;"></canvas> -->
                     <canvas id="beam" width="15" height='480' style="position:absolute;top:18%;left:50%;transform:translateX(-50%);
@@ -171,46 +137,6 @@
                                 <img id="outImage2" style="display: none;" class="w-100" src="../images/diffractm.jpg" />
                             </figure>
 
-                        </div>
-                    </div>
-                    <div class="col-12" id="taskArea">
-                        <div class="panel padd">
-                            <center>
-                                <h2>TASK</h2>
-                            </center>
-                            <br /> Select the most appropiate image obtained when accelerating voltage is set at X at <b>BSE
-                                Mode</b>.
-                            <div class="row mt-3">
-                                <div class="input-group mb-3 col-6">
-                                    <label>
-                                        <input value="0" type="radio" name="task"
-                                            aria-label="Checkbox for following text input">
-                                        <img class="img-thumbnail" src="../images/Slide22.JPG">
-                                    </label>
-                                </div>
-                                <div class="input-group mb-3 col-6">
-                                    <label>
-                                        <input value="1" type="radio" name="task"
-                                            aria-label="Checkbox for following text input">
-                                        <img class="img-thumbnail" src="../images/Slide22.JPG">
-                                    </label>
-                                </div>
-                                <div class="input-group mb-3 col-6">
-                                    <label>
-                                        <input value="2" type="radio" name="task"
-                                            aria-label="Checkbox for following text input">
-                                        <img class="img-thumbnail" src="../images/Slide22.JPG">
-                                    </label>
-                                </div>
-                                <div class="input-group mb-3 col-6">
-                                    <label>
-                                        <input value="3" type="radio" name="task"
-                                            aria-label="Checkbox for following text input">
-                                        <img class="img-thumbnail" src="../images/Slide22.JPG">
-                                    </label>
-                                </div>
-                            </div>
-                            <button class="but sm w-100 blue mt-2 mb-3" onclick="taskSubmit()">Submit</button>
                         </div>
                     </div>
                 </div>
@@ -311,7 +237,7 @@
                     position: inherit;" />
                     <div>
                         <ul id="sortable2" style="min-height: 5rem;
-                            left: 41%;
+                            left: 40%;
                             top: 7%;
                         position: absolute;
                         z-index: 5;" class="connectedSortable">
@@ -336,11 +262,8 @@
                         </button>
                     </div>
                     <div class="modal-body text-center">
-                        <img id="part-img" src="./images/parts/1.png" />
                         <p class="mt-5">
-                            <b>Description:</b> <span id="part-desc">This part is used to do something, something
-                                something.
-                                Something something.</span>
+
                         </p>
                     </div>
                 </div>
@@ -359,6 +282,19 @@
     <script src="../js/jquery-ui.min.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/task.js"></script>
+    <script>
+        var inp = $("#position :selected").val();
+        let i = 0;
+
+        function change() {
+            if (inp == 1) {
+                document.getElementById("dropzone").style.marginTop = "4%";
+            } else {
+                document.getElementById("dropzone").style.marginTop = "16%";
+            }
+        }
+    </script>
+
     <script>
         function changeiframe() {
             window.location = './calc.html';

@@ -199,6 +199,7 @@ $(function() {
     $("#vslider").slider({
         min: 5,
         max: 20,
+        animate: "slow",
         disabled: true,
         create: function() {
             vhandle.text($(this).slider("value"));
@@ -207,15 +208,27 @@ $(function() {
             vhandle.text(ui.value);
         }
     });
+
     $("#avslider").slider({
-        min: 5,
-        max: 20,
+        min: 100,
+        max: 102,
+        value: 100,
+        animate: "slow",
+        orientation: "horizontal",
         disabled: true,
         create: function() {
             avhandle.text($(this).slider("value"));
         },
         slide: function(event, ui) {
-            avhandle.text(ui.value);
+            if (ui.value == 100) {
+                avhandle.text("100");
+            }
+            if (ui.value == 101) {
+                avhandle.text("120");
+            }
+            if (ui.value == 102) {
+                avhandle.text("200");
+            }
         }
     });
     $("#bslider").slider({
@@ -228,17 +241,7 @@ $(function() {
             $("#outImage").css("filter", `brightness(${100 + brightness}%) contrast(${100 + contrast}%)`)
         }
     });
-    $("#cslider").slider({
-        max: 300,
-        create: function() {
-            chandle.text($(this).slider("value"));
-        },
-        slide: function(event, ui) {
-            chandle.text(ui.value);
-            contrast = ui.value;
-            $("#outImage").css("filter", `brightness(${100 + brightness}%) contrast(${100 + contrast}%)`)
-        }
-    });
+
     $("#on").one("click", function() {
         $('#on').css('backgroundColor', '#21e76e');
         // beam comes here
