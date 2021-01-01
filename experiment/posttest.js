@@ -90,7 +90,7 @@
 
   const myQuestions = [
     {
-      question: "1.Temperature of sample is kept near that of liquid nitrogen, EXCEPT for which reason?",  ///// Write the question inside double quotes
+      question: "1. Temperature of sample is kept near that of liquid nitrogen, EXCEPT for which reason?",  ///// Write the question inside double quotes
       answers: {
         a: "To avoid any damage from electron beam ",                  ///// Write the option 1 inside double quotes
         b: "To stabilise the voltage of electron gun ",
@@ -101,7 +101,7 @@
     },
 
     {
-      question: "2.Which of the following is the most important lens in a TEM? ",  ///// Write the question inside double quotes
+      question: "2. Which of the following is the most important lens in a TEM? ",  ///// Write the question inside double quotes
       answers: {
         a: "Projector lens",
         b: "Objective lens", 
@@ -112,7 +112,7 @@
       correctAnswer: "b"                ///// Write the correct option inside double quotes
     }, 
      {
-      question: "3.The following is<img src='images/fig1.PNG'> ",  ///// Write the question inside double quotes
+      question: "3. The following is<img src='images/fig1.PNG'> ",  ///// Write the question inside double quotes
       answers: {
         a: "Bright Field Image",
         b: "Selected area diffraction", 
@@ -123,7 +123,7 @@
       correctAnswer: "b"                ///// Write the correct option inside double quotes
     }, 
 {
-      question: "4.The following is<img src='images/fig2.PNG'> ",  ///// Write the question inside double quotes
+      question: "4. The following is<img src='images/fig2.PNG'> ",  ///// Write the question inside double quotes
       answers: {
         a: "Bright Field Image",
         b: "Selected area diffraction", 

@@ -90,7 +90,7 @@
 
   const myQuestions = [
     {
-      question: "1.Which of the following is NOT an electron source: ",  ///// Write the question inside double quotes
+      question: "1. Which of the following is NOT an electron source: ",  ///// Write the question inside double quotes
       answers: {
         a: "SiO<sub>2</sub>",                  ///// Write the option 1 inside double quotes
         b: "W-filament ",                  ///// Write the option 2 inside double quotes
@@ -101,7 +101,7 @@
     },
 
     {
-     question: "2.What is the typical voltage in a conventional TEM instrument? ",  ///// Write the question inside double quotes
+     question: "2. What is the typical voltage in a conventional TEM instrument? ",  ///// Write the question inside double quotes
       answers: {
         a: "230 V",                  ///// Write the option 1 inside double quotes
         b: "440 V",                  ///// Write the option 2 inside double quotes
@@ -112,7 +112,7 @@
     },                                  ///// To add more questions, copy the section below 
     	
     	{
-     question: "3.What is the typical level of vacuum required in the TEM? ",  ///// Write the question inside double quotes
+     question: "3. What is the typical level of vacuum required in the TEM? ",  ///// Write the question inside double quotes
       answers: {
         a: "1 - 10 torr",                  ///// Write the option 1 inside double quotes
         b: "10<sup>-1</sup> -10<sup>-2</sup> torr",                  ///// Write the option 2 inside double quotes
@@ -122,7 +122,7 @@
       correctAnswer: "d"                ///// Write the correct option inside double quotes
     }, 
     {
-     question: "4.Which of the following is used to obtain diffraction pattern? ",  ///// Write the question inside double quotes
+     question: "4. Which of the following is used to obtain diffraction pattern? ",  ///// Write the question inside double quotes
       answers: {
         a: "Elastically scattered electrons",                  ///// Write the option 1 inside double quotes
         b: "Inelastically scattered electrons",                  ///// Write the option 2 inside double quotes
@@ -132,7 +132,7 @@
       correctAnswer: "a"                ///// Write the correct option inside double quotes
     }, 
     {
-     question: "5.Which of the following is used to obtain Kikuchi patterns? ",  ///// Write the question inside double quotes
+     question: "5. Which of the following is used to obtain Kikuchi patterns? ",  ///// Write the question inside double quotes
       answers: {
         a: "Elastically scattered electrons",                  ///// Write the option 1 inside double quotes
         b: "Inelastically scattered electrons",                  ///// Write the option 2 inside double quotes
