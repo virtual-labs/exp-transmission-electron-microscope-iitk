@@ -43,25 +43,17 @@
                         <option value="1">Imaging mode</option>
                         <option value="2">Diffraction mode</option>
                     </select><br>
-                    <br> Available Material:
+                    <br> Available Materials:
                     <div class="row materials mt-2" disabled>
-<!--
-                        <div data-mid="0" class="col-sm-2 col-md-4 material">
-                            <img src="../images/Slide38.JPG" class="img-thumbnail img-fluid" /> Metal
-                        </div>
--->
+                        
                         <div data-mid="1" class="col-sm-2 col-md-4 material">
                             <img src="../images/Slide38.JPG" class="img-thumbnail img-fluid" /> Ceramic
                         </div>
-<!--
-                        <div data-mid="2" class="col-sm-2 col-md-4 material">
-                            <img src="../images/Slide38.JPG" class="img-thumbnail img-fluid" /> Hair
-                        </div>
--->
+                       
                     </div>
 
                     <div class="form-group mt-4">
-                        <label for="formControlRange" disabled>Vaccum (in kv)</label>
+                        <label for="formControlRange" disabled>Vaccum (in torr)</label>
                         <div class="row">
                             <div class="col-9">
                                 <div id="vslider" class="mt-3">
@@ -69,7 +61,7 @@
                                 </div>
                             </div>
                             <div class="col-3">
-                                <button id="setvac" class="btn btn-primary w-100" disabled>Set</button>
+                                <button id="setvac" class="btn btn-primary w-100"   disabled>Set</button>
                             </div>
                         </div>
                     </div>
@@ -85,7 +77,7 @@
 
                             </div>
                             <div class="col-3">
-                                <button id="setav" class="btn btn-primary w-100" disabled>Set</button>
+                                <button id="setav" class="btn btn-primary w-100"  disabled>Set</button>
                             </div>
                         </div>
                     </div>
@@ -93,6 +85,9 @@
                     <button id="on" class="but sm w-100 green" disabled>Beam On</button>
 
                     <button class="btn btn-danger w-100 mt-2" onclick="location.reload()">Reset</button>
+                </div>
+
+                <div id="toast-wrapper" aria-live="polite" aria-atomic="true" style="position:fixed; right:1rem; top: 1rem; z-index: 99999;">
                 </div>
             </div>
 
@@ -150,6 +145,8 @@
                 </button>
 
             </div>
+        </div>
+        <div id="toast-wrapper1" aria-live="polite" aria-atomic="true" style="position:fixed; right:1rem;">
         </div>
     </div>
 
@@ -274,7 +271,7 @@
             </div>
 
         </div>
-        <div id="toast-wrapper" aria-live="polite" aria-atomic="true" style="position:fixed; right:1rem;">
+        <div id="toast-wrapperr" aria-live="polite" aria-atomic="true" style="position:fixed; right:1rem; top: 1rem; z-index: 99999;">
         </div>
     </div>
 
@@ -289,7 +286,7 @@
     <script>
         var inp = $("#position :selected").val();
         let i = 0;
-
+      
         function change() {
             if (inp == 1) {
                 document.getElementById("dropzone").style.marginTop = "4%";
@@ -297,6 +294,7 @@
                 document.getElementById("dropzone").style.marginTop = "16%";
             }
         }
+        
     </script>
 
     <script>

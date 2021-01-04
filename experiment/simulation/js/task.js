@@ -3,6 +3,30 @@ function randEx(min, max) {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+var timerId, typeTarget = $("#typer"),
+    tWrapperr = $("#toast-wrapperr");
+
+
+    function showToastt(msg, type = 0) {
+        tWrapperr.append(`<div id="t${ti++}" class="toast${type == 1 ? ' danger' : (type == 2 ? ' success' : '')}" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <svg class="bd-placeholder-img rounded mr-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="${type == 1 ? '#ff0000' : (type == 2 ? '#31a66a' : '#007aff')}" /></svg>
+            <strong class="mr-auto">Notification</strong>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="toast-body">
+            ${msg}
+    </div>
+    </div>`);
+        $(`#t${ti - 1}`).toast({
+            delay: 5500
+        });
+        $(`#t${ti - 1}`).toast('show');
+    }
+
+    
 
 var correct = [
     "1",
@@ -22,21 +46,35 @@ $(function() {
     }).disableSelection();
 });
 
+$("#setvac").click(function () {
+    const tempVac = parseInt($("#vslider").slider("option", "value"));
+    if (tempVac == 0)
+      return;
+    if ( tempVac != 2)
+      showToast("Vacuum should be in HV state for cermaics.", 1);
+    else if (tempVac == 2){
+        $("#setav").prop("disabled", false);
+       $("#avslider").slider("option", "disabled", false);
+       showToast("Vacuum has been set successfully.", 0); 
+    }
+    vac = tempVac; 
+    
+  });
 
-
+  
 function chk() {
     var sortedIDs = $("#sortable2").sortable("toArray");
     console.log("hi", sortedIDs, correct);
     if (sortedIDs.length !== correct.length) {
-        showToast("First move all parts.", 0);
+        showToastt("First move all parts.", 0);
     } else {
         for (var i = 0; i < sortedIDs.length; i++) {
             if (sortedIDs[i] !== correct[i]) {
-                showToast("Not correctly aligned", 1);
+                showToastt("Not correctly aligned", 1);
                 return;
             }
         }
-        showToast("VALID", 2);
+        showToastt("VALID", 2);
     }
 }
 

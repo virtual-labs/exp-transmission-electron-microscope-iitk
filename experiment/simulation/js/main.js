@@ -35,6 +35,7 @@ const typeSpeed = 60,
             desc: "Description for part 4 ok Description for part 1 ok Description for part 1 ok"
         }
     ];
+    var   matSelected = 1 ;
 var timerId, typeTarget = $("#typer"),
     tWrapper = $("#toast-wrapper"),
     ti = 0,
@@ -196,19 +197,43 @@ $(function() {
         avhandle = $("#avslider").find(".custom-handle"),
         chandle = $("#cslider").find(".custom-handle"),
         bhandle = $("#bslider").find(".custom-handle");
+    // $("#vslider").slider({
+    //     min: 5,
+    //     max: 20,
+    //     animate: "slow",
+    //     disabled: true,
+    //     create: function() {
+    //         vhandle.text($(this).slider("value"));
+    //     },
+    //     slide: function(event, ui) {
+    //         vhandle.text(ui.value);
+    //     }
+    // });
     $("#vslider").slider({
-        min: 5,
-        max: 20,
-        animate: "slow",
+        min: 0,
+        max: 2,
         disabled: true,
-        create: function() {
-            vhandle.text($(this).slider("value"));
+        create: function () {
+          vhandle.text("Off");
         },
-        slide: function(event, ui) {
-            vhandle.text(ui.value);
+        slide: function (event, ui) {
+          var txt = "Off";
+          switch (ui.value) {
+            case 0:
+              txt = "Off";
+              break;
+            case 1:
+              txt = "LV";
+              break;
+            case 2:
+              txt = "HV";
+              break;
+          }
+          vhandle.text(txt);
         }
     });
-
+  
+   
     $("#avslider").slider({
         min: 100,
         max: 102,
@@ -271,8 +296,8 @@ $(function() {
 
         vac = $("#vslider").slider("option", "value");
 
-        $("#setav").prop("disabled", false);
-        $("#avslider").slider("option", "disabled", false);
+        // $("#setav").prop("disabled", false);
+        // $("#avslider").slider("option", "disabled", false);
 
         $("#vacImg").animate({
             fontSize: 220
