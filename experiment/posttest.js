@@ -112,7 +112,7 @@
       correctAnswer: "b"                ///// Write the correct option inside double quotes
     }, 
      {
-      question: "3. The following is<img src='images/fig1.PNG'> ",  ///// Write the question inside double quotes
+      question: "3. The following is<br><img src='images/fig1.PNG'> ",  ///// Write the question inside double quotes
       answers: {
         a: "Bright Field Image",
         b: "Selected area diffraction", 
@@ -123,7 +123,7 @@
       correctAnswer: "b"                ///// Write the correct option inside double quotes
     }, 
 {
-      question: "4. The following is<img src='images/fig2.PNG'> ",  ///// Write the question inside double quotes
+      question: "4. The following is<br><img src='images/fig2.PNG'> ",  ///// Write the question inside double quotes
       answers: {
         a: "Bright Field Image",
         b: "Selected area diffraction", 
