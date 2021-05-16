@@ -1,0 +1,46 @@
+[{
+	"question": "1. Which of the following is NOT an electron source: ",
+	"answers": {
+		"a": "SiO<sub>2</sub>",
+		"b": "W-filament ",
+		"c": "LabB<sub>6</sub>",
+		"d": "CeB<sub>6</sub>"
+	},
+	"correctAnswer": "a"
+}, {
+	"question": "2. What is the typical voltage in a conventional TEM instrument? ",
+	"answers": {
+		"a": "230 V",
+		"b": "440 V",
+		"c": "20 kV",
+		"d": "200 kV "
+	},
+	"correctAnswer": "d"
+}, {
+	"question": "3. What is the typical level of vacuum required in the TEM? ",
+	"answers": {
+		"a": "1 - 10 torr",
+		"b": "10<sup>-1</sup> -10<sup>-2</sup> torr",
+		"c": "10<sup>-3</sup> - 10<sup>-5</sup> torr",
+		"d": "10<sup>-6</sup> - 10<sup>-8</sup> torr"
+	},
+	"correctAnswer": "d"
+}, {
+	"question": "4. Which of the following is used to obtain diffraction pattern? ",
+	"answers": {
+		"a": "Elastically scattered electrons",
+		"b": "Inelastically scattered electrons",
+		"c": "Transmitted electrons",
+		"d": "X-rays "
+	},
+	"correctAnswer": "a"
+}, {
+	"question": "5. Which of the following is used to obtain Kikuchi patterns? ",
+	"answers": {
+		"a": "Elastically scattered electrons",
+		"b": "Inelastically scattered electrons",
+		"c": "Transmitted electrons",
+		"d": "X-rays "
+	},
+	"correctAnswer": "b"
+}]

@@ -1,0 +1,37 @@
+[{
+	"question": "1. Temperature of sample is kept near that of liquid nitrogen, EXCEPT for which reason?",
+	"answers": {
+		"a": "To avoid any damage from electron beam ",
+		"b": "To stabilise the voltage of electron gun ",
+		"c": "To avoid re-condensation of dirt on sample ",
+		"d": "To avoid vitrification of sample.  "
+	},
+	"correctAnswer": "b"
+}, {
+	"question": "2. Which of the following is the most important lens in a TEM? ",
+	"answers": {
+		"a": "Projector lens",
+		"b": "Objective lens",
+		"c": "Condenser lens",
+		"d": "Intermediate lens "
+	},
+	"correctAnswer": "b"
+}, {
+	"question": "3. The following is<br><img src='images/fig1.PNG'> ",
+	"answers": {
+		"a": "Bright Field Image",
+		"b": "Selected area diffraction",
+		"c": "Kikuchi line",
+		"d": "Back-scattered electron image "
+	},
+	"correctAnswer": "b"
+}, {
+	"question": "4. The following is<br><img src='images/fig2.PNG'> ",
+	"answers": {
+		"a": "Bright Field Image",
+		"b": "Selected area diffraction",
+		"c": "Kikuchi line",
+		"d": "Back-scattered electron image "
+	},
+	"correctAnswer": "a"
+}]
