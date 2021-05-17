@@ -1,0 +1,203 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Wavelength Calculator</title>
+    <script language="JavaScript">
+        function format(temp) {
+            var sign = "+";
+            if (temp < 0) {
+                sign = "-";
+                temp = -temp;
+            }
+            var exp = Math.log(temp) / Math.log(10);
+            var exponent = "" + Math.floor(exp);
+            var mantissa = "" + Math.pow(10, exp - exponent);
+            if (exponent > 0) {
+                exponent = "+" + exponent;
+            }
+            document.electron.Dummy.value = sign + mantissa.substring(0, 6) + "e" + exponent;
+            if (temp == 0) {
+                document.electron.Dummy.value = "0";
+            }
+            if (temp == Infinity) {
+                document.electron.Dummy.value = "Infinity";
+            }
+        }
+
+        function percent(temp) {
+            var temp = "" + temp * 100;
+            document.electron.Dummy.value = temp.substring(0, 6) + "%";
+            var loc = temp.indexOf("e", 0);
+            var end = loc;
+            if (loc > 6) {
+                end = 6;
+            }
+            if (loc > 0) {
+                document.electron.Dummy.value = temp.substring(0, end) + temp.substring(loc) + "%";
+            }
+        }
+
+        function fixed(temp) {
+            var temp = "" + temp;
+            document.electron.Dummy.value = temp.substring(0, 6);
+        }
+
+        // End script -->
+    </script>
+</head>
+
+<body data-gr-c-s-loaded="true">
+
+
+    <div class="container-fluid main-wrapper" id="wave">
+        <div class="row lcontrol">
+            <div class="col">
+                <div class="panel">
+                    <center>
+                        <div class="btn-group btn-group-lg align-self-center scenes" role="group" aria-label="Basic example">
+                            <button type="button" data-mode="1" class="btn btn-primary active">De-broglie wavelength calculator</button>
+
+                        </div>
+                    </center>
+                </div>
+            </div>
+        </div>
+        <div class="row ucontrol">
+            <div class="col-3">
+                <div class="panel mb-1" style="width: 115%;">
+                    <div class="panel-head">
+                        Instructions
+                    </div>
+                    <div id="typer" style="height: 5rem;">
+                        Enter Voltage (in kv) to calculate the wavelength
+                    </div>
+                </div>
+                <div class="panel padd" style="width: 115%;">
+                    <br>
+                    <!-- Formula used -->
+
+
+                    <p style="font-size: 25px;color: blue;">De-Broglie equation</p>
+                    <p style="font-size: 17px;">
+
+                        The De-Broglie Wavelength (λ) of electron is given as: <br> λ=h/mv<br> (1) Where h is the Plank’s constant, m and v are the mass and velocity, respectively, of the electron.
+                        <br>or <br> or λ=(1.225 )/√V (nm) <br> where V is accelerating voltage <br>
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="col-6">
+            <div class="panel" style=" background-color: #eee!important; 
+        height: 45%;
+        bottom: 47%;
+        width: 60%;
+        position: fixed;
+        margin: -20% 0% 0% 30%;
+      ">
+
+
+                <form name="electron"><input name="Dummy" type="HIDDEN" value="-0.093">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <b><h2 style="color: #0e68b6;">Enter the Accelerating Voltage to find the wavelength</h2></b>
+                                    <br><b> Accelerating Voltage (in KV): </b>
+                                    <br> <br>
+                                    <input name="HV" type="TEXT" style="height: 3rem;">
+
+                                    <br> <br>
+                                    <input style="width: 15rem;height:4rem;color: #fff;
+                                     background-color: #286090; font-size: 30px;
+                                     border-color: #204d74;" type="BUTTON" value="Calculate" onclick="calc()"> <button style="width: 15rem;height:4rem;color: #fff;
+                                     background-color: #e02828;font-size: 30px;
+                                     border-color: #e65b49;" onclick="location.reload()">Reset</button>
+                                </td>
+                            </tr>
+                            <tr style="display: none;" bgcolor="#DDEEFF">
+                                <th colspan="4">Velocity of Electrons:</th>
+                            </tr>
+                            <tr style="display: none;">
+                                <td align="CENTER">Newtonian:<br><input name="NV" type="TEXT"><br><input name="NVPt" type="TEXT"></td>
+                                <td align="CENTER">Einsteinian:<br><input name="EV" type="TEXT"><br><input name="EVPt" type="TEXT"></td>
+                                <td align="CENTER">Difference:<br><input name="VDiff" type="TEXT"><br><input name="VDiffPt" type="TEXT"></td>
+                                <td align="CENTER" valign="TOP">Unit:<br><b>m/sec<br><br>%</b></td>
+                            </tr>
+                            <tr style="display: none;" bgcolor="#DDEEFF">
+                                <th colspan="4">Mass of Electrons:</th>
+                            </tr>
+                            <tr style="display: none;">
+                                <td align="CENTER"><input name="NMa" type="TEXT"><br><input name="NEU" type="TEXT"></td>
+                                <td align="CENTER"><input name="EMa" type="TEXT"><br><input name="EEU" type="TEXT"></td>
+                                <td align="CENTER"><input name="MaDiff" type="TEXT"><br><input name="EUDiff" type="TEXT"></td>
+                                <td align="CENTER"><b>kg<br><br>EU</b></td>
+                            </tr>
+                            <tr style="display: none;" bgcolor="#DDEEFF">
+                                <th colspan="4">Energy of Electrons:</th>
+                            </tr>
+                            <tr style="display: none;">
+                                <td align="CENTER"><input name="NEn" type="TEXT"></td>
+                                <td align="CENTER"><input name="EEn" type="TEXT"></td>
+                                <td align="CENTER"><input name="EnDiff" type="TEXT"></td>
+                                <td align="CENTER"><b>N*m</b></td>
+                            </tr>
+                            <tr style="display: none;" bgcolor="#DDEEFF">
+                                <th colspan="4">Momentum of Electrons:</th>
+                            </tr>
+                            <tr style="display: none;">
+                                <td align="CENTER"><input name="NMo" type="TEXT"></td>
+                                <td align="CENTER"><input name="EMo" type="TEXT"></td>
+                                <td align="CENTER"><input name="MoDiff" type="TEXT"></td>
+                                <td align="CENTER"><b>N*sec</b></td>
+                            </tr>
+
+                            <div style="width: 30rem;
+                              height: 17rem; 
+                              color: #fff; 
+                              font-size: 30px;
+                              border-color: #204d74;
+                              margin-top: 17rem;
+                              position: absolute;background-color: #fcf2e2;">
+                                <h2 style="margin-left: 2rem;margin-top: 2rem;color: #204d74; ">Result</h2>
+                                <h4 style="margin-left: 8rem;color: #cd7e09;">Wavelength (in nm)</h4>
+                                <tr>
+                                    <td style="display: none;" align="CENTER"><input name="NWa" type="TEXT"><br><input name="NWan" type="TEXT"></td>
+                                    <td align="CENTER">
+                                        <input style="display: none;" name="EWa" type="TEXT"><br>
+                                        <input style="margin-top: 7rem;
+                                    margin-left: -17rem;
+                                    position: relative;" name="EWan" type="TEXT"></td>
+                                    <td style="display: none;" align="CENTER"><input name="WaDiff" type="TEXT"><br><input name="WanDiff" type="TEXT"></td>
+                                    <!-- <td align="CENTER"><b>nm</b></td> -->
+                                </tr>
+                            </div>
+                        </tbody>
+                    </table>
+
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+    <script language="JavaScript">
+    </script>
+
+    <script src="../js/task.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/main.js"></script>
+
+
+</body>
+
+</html>

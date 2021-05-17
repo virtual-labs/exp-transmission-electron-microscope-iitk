@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta content="" name="description"/>
+    <meta content="" name="author"/>
+    <!-- For iPhone -->
+    <meta name="msapplication-TileColor" content="#4076e0">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#4076e0">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#4076e0">
+    <title>Virtual Labs</title>
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css" integrity="sha512-Oy18vBnbSJkXTndr2n6lDMO5NN31UljR8e/ICzVPrGpSud4Gkckb8yUpqhKuUNoE+o9gAb4O/rAxxw1ojyUVzg==" crossorigin="anonymous" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/github-markdown.min.css" />
+    <link rel="stylesheet" href="./assets/css/vlabs-style.css" />
+    
+    <script src="./assets/js/jquery-3.4.1.slim.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+      integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+      integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      h1 {
+      font-size: 1.8rem;
+      }
+      h2 {
+      font-size: 1.4rem;
+      }
+      h3 {
+      font-size: 1.2rem;
+      }
+
+      h2, h3 {
+      font-weight: 800;
+      }
+    </style>
+  </head>
+  <body class="p-0 container-fluid vlabs-page d-flex flex-column justify-content-between">
+    <header class="vlabs-header sticky-top bg-white">
+      <nav class="p-0 navbar navbar-light d-flex align-items-stretch">
+        
+        <button class="navbar-toggler px-4"
+        	    type="button" onclick="toggle()">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="d-flex justify-content-center">        
+          <a href="http://vlab.co.in" class="navbar-brand">
+            <img src="./assets/images/vlabs-color-small-moe.jpg" alt="vlabs logo">
+          </a>
+        </div>
+        
+        <div id="headerNavbar" class="border-top flex-grow-1 d-flex align-items-center">
+          <ul class="navbar-nav ml-auto text-center d-flex flex-md-row">
+            <li class="nav-item px-2 m-1">
+              <a href="http://vlab.co.in">HOME</a>
+            </li>
+            <li class="nav-item px-2 m-1">
+              <a href="http://vlab.co.in/participating-institutes">PARTNERS</a>
+            </li>
+            <li class="nav-item px-2 m-1">
+              <a href="http://vlab.co.in/contact-us">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="container-fluid flex-fill d-flex flex-column vlabs-page-main">
+      <div class="row flex-grow-1 px-4 d-flex flex-nowrap">
+        <div class="nav flex-column sidebar flex-shrink-0" id="menu">
+            <div>
+              <div class="d-flex">
+                <a href="index.html" class="p-2 ">
+                  Aim
+                </a>
+                
+              </div>
+              <div id="t-"
+                
+                   class="collapse" 
+                >
+                <div class="px-1 d-flex flex-column tasks">
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="d-flex">
+                <a href="theory.html" class="p-2  current-item ">
+                  Theory
+                </a>
+                
+              </div>
+              <div id="t-"
+                
+                   class="collapse" 
+                >
+                <div class="px-1 d-flex flex-column tasks">
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="d-flex">
+                <a href="pretest.html" class="p-2 ">
+                  Pretest
+                </a>
+                
+              </div>
+              <div id="t-"
+                
+                   class="collapse" 
+                >
+                <div class="px-1 d-flex flex-column tasks">
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="d-flex">
+                <a href="procedure.html" class="p-2 ">
+                  Procedure
+                </a>
+                
+              </div>
+              <div id="t-"
+                
+                   class="collapse" 
+                >
+                <div class="px-1 d-flex flex-column tasks">
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="d-flex">
+                <a href="simulation.html" class="p-2 ">
+                  Simulation
+                </a>
+                
+              </div>
+              <div id="t-"
+                
+                   class="collapse" 
+                >
+                <div class="px-1 d-flex flex-column tasks">
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="d-flex">
+                <a href="posttest.html" class="p-2 ">
+                  Posttest
+                </a>
+                
+              </div>
+              <div id="t-"
+                
+                   class="collapse" 
+                >
+                <div class="px-1 d-flex flex-column tasks">
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="d-flex">
+                <a href="references.html" class="p-2 ">
+                  References
+                </a>
+                
+              </div>
+              <div id="t-"
+                
+                   class="collapse" 
+                >
+                <div class="px-1 d-flex flex-column tasks">
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="d-flex">
+                <a href="feedback.html" class="p-2 ">
+                  Feedback
+                </a>
+                
+              </div>
+              <div id="t-"
+                
+                   class="collapse" 
+                >
+                <div class="px-1 d-flex flex-column tasks">
+                </div>
+              </div>
+            </div>
+        </div>        <div class="vlabs-page-content px-4 pb-4 flex-grow-1 markdown-body">
+          <div class="text-center">
+            <h2 id="basic-operations-of-transmission-electron-microscope-imaging-and-diffraction-pattern">Basic operations of Transmission Electron Microscope (Imaging and Diffraction Pattern)</h2>
+        
+          </div>
+            <p><b>TEM Instrumentation:</b><br><br></p>
+        <div><div style="float:left;width:55%;text-align: justify;text-justify: inter-word; margin-right:40px;">Transmission electron microscope (TEM) is a very strong tool to obtain microstructural and sub-microstructural information, along with the corresponding atomic orientation from diffraction pattern of the crystals. The resolution of TEM is to the tune of ~0.1 nm. The sample preparation is very tedious and is explained in an earlier experiment. In summary, sample must be transparent, Figure 1, to electrons in order for its imaging and obtaining phase-orientation information. The TEM directs incident electron beam on the sample, but the resulting signal is captured after the electron beam has interacted and passes through the sample, Figure 2. For transmitted electrons, the sample must be thin enough to allow passage of electrons through the sample. Herein, again, electron can be transmitted without any interaction or can also be elastically scattered or inelastically scattered. </div>
+        <!-- <video width="320" height="240" controls>
+          <source src="exp5-tem.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video><br>Video on Basic operations of Transmission Electron Microscope (Imaging and Diffraction Pattern) -->
+        <div style="float:left;width:40%;border: solid 1 px black;">
+        <video width="320" height="240" controls>
+          <source src="images/exp5-tem.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video><br>Video on Basic operations of Transmission Electron Microscope (Imaging and Diffraction Pattern)</div>
+        </div>
+        <div style="content: '.';clear: both;display: block;height: 0;visibility: hidden;"></div>
+        <div style ="text-align: justify;text-justify: inter-word;">
+         <img src="images/tem1.PNG"><br>
+        Fig 1: summary of various signals obtained by interaction of electrons with matter in an electron microscope.<br><br>
+        <b>Instrumentation and Importance of Filament, Voltage and Vacuum: </b>
+        
+        <p>The transmission electron microscope (TEM), Fig. 2, consists of electron gun to generate the electrons followed by set of electromagnetic coils to control the beam size and shape (to make parallel or convergent or divergent for various characterisations). Typically, thermionic (W-filament), and field-emission (using LaB6, CeB6 filaments) is used for generating electrons. Anode repels the electrons to constrict the diverging beam, and the set of electromagnetic lens (condenser lens) focuses the beam on the sample. The sample is kept in a cold chamber (in liquid nitrogen condition) in order to stabilise and restrict its damage upon electron beam irradiation. A liquid nitrogen dewar provides condensation of ionised atoms in the vicinity (in the immediate environment near sample) so as not to interfere with the sample imaging and characterisation. The electron beam passing through the electron-transparent sample falls on the objective lens. The objective lens is most important lens as it generates the first image of the sample, which is magnified using projective lens.<br><br>
+        <img src="images/exp5.PNG"><br><br>
+        Figure 2: Schematic showing the placement of electromagnetic lenses and specimen in the transmission electron microscope. Note that the signal is captured after the electron beam passes through the sample.<br><br>
+        The TEM set-up requires very stable and high-voltage (orders of 120 kV to 2 MV, and typically 200 kV is used) and high level of vacuum (10<sup>-6</sup>- 10<sup>-8</sup> torr). An electron gun is required to generate and accelerate electron at high energy. The generation of images (both bright field or dark field) or diffraction pattern in the TEM is explained later along with aspects of imaging and contrast. The description starts with the variation of electron beam wavelength with respect to accelerating voltage. It may be noted that resolution of image depends on the wavelength of electron, which can be decreased (in order to obtain higher resolution) by increasing accelerating voltage. Typical accelerating voltages are ~200 kV, and special, high resolution TEM may utilise up to 2 MeV energy (or 2 MV voltage). The resolution of the electron beam depends on the electron wavelength (dependent on the accelerating voltage) as follows:
+        The generation of images (both bright field or dark field) or diffraction pattern in the TEM is explained later along with aspects of imaging and contrast. The description starts with the variation of electron beam wavelength with respect to accelerating voltage. It may be noted that resolution of image depends on the wavelength of electron, which can be decreased (in order to obtain higher resolution) by increasing accelerating voltage. Typical accelerating voltages are ~200 kV, and special, high resolution TEM may utilise up to 2 MeV energy (or 200 MV voltage). The resolution of the electron beam depends on the electron wavelength (dependent on the accelerating voltage) as follows: <br><br>
+        The De-Broglie Wavelength (λ) of electron is given as:<br>
+        <img src="images/exp5_1.PNG">      (1)<br>
+        Where h is the Plank’s constant, m and v are the mass and velocity, respectively, of the electron.<br><br>
+        Now, the kinetic energy (E) of the electron are provided as<br><br>
+        <img src="images/exp5_2.PNG">  <b>or</b> <img src="images/exp5_3.PNG"> <b>or</b> <img src="images/exp5_4.PNG">     (2)<br>
+        Fitting (2) in (1) gives:<br>
+        <img src="images/exp5_5.PNG"><b>or</b>&nbsp;&nbsp;&nbsp;<img src="images/exp5_6.png">       (3)<br><br>
+        Inserting the required values, we obtain the dependence of wavelength (λ) of incident electron on the accelerating voltage (V):<br>
+        <img src="images/exp5_7.PNG">  <b>or</b> <br><img src="images/exp5_8.PNG">         (4)<br>
+        This is a very important relation to know the wavelength of electron from the accelerating voltage. You may recollect that the wavelength of incident radiation decides the resolution of the system. So, smaller the wavelength (or higher the accelerating voltage), the better the resolution (or smaller the distance which can be separated or resolved) by imaging.<br>
+        Note: The relativistic mass of electron (m) is given as <img src="images/exp5_9.PNG"> where m<sub>0</sub> is the rest mass. Thus, the non-relativistic electron wavelength (provided in eq. (4)) is usually higher than the relativistic wavelength of electron).<br><br>
+        <b>TEM Imaging/ Diffraction </b><br></p>
+        <p>Set of electromagnetic lenses form a condenser system that is utilised to get a parallel or convergent beam for imaging/diffraction. Then, objective electromagnetic lens forms the heart of TEM system that is utilised to form the first intermediate image. The quality of this image decides the resolution of the final image. The diffraction and intermediate lens are switched to result diffraction or imaging, respectively. The projection lens forms the second intermediate image (either diffraction pattern or the image). The column tube (typically few mm in diameter) through which the electron beam passes must be very clean otherwise its interaction with the column itself may scatter the beam and provide poor signals. Therefore, the sample is kept under cryogenic conditions (usually under liquid nitrogen) so the ionised material (after interaction with incident beam) condenses right there (i.e. not allowing the free ion/atom to wander into column tube and condense there had the sample was not cooled).  So, usually a liquid nitrogen dewar is used to maintain low temperature near the TEM specimen. Final image or diffraction pattern is observed on the viewing screen or camera. </p>
+        <p>The ray-diagram for the TEM is presented in Figure 3. TEM can produce images, when the aperture is kept at back-focal plane of objective lens. Alternately, diffraction pattern can result when the aperture is kept at image plane of objective lens.<br>
+        <img src="images/exp5_ray.PNG"><br><br>
+        Figure 3: Ray-diagram eliciting the placement of aperture in obtaining image (left figure) or diffraction pattern (right figure).<br><br>
+        When the aperture is placed at the back-focal plane of objective lens, a bright field image is resulted (Fig. 4a), whereas when the aperture is placed at image plan of objective lens, the diffraction pattern results. Note that the diffraction can be taken from a selected area (Fig. 4b) called selected area diffraction). The diffraction can show a certain pattern (i.e. individual spots from a single-crystal region, or rings arising from nanocrystalline region, or scattered overlapping spots from a few different crystals). Note that the bright field images show bright field (and features appear dark), and the units of length (to the typical tune of nm) is obtained (Fig. 4a). Whereas, the diffraction image is obtained in the reciprocal space (so the units of 1/nm) are observed. The pattern changes depending upon how the electron beam interacts with the matter and how many crystals interact to provide the resulting image. The symmetry of the real crystal decides the final pattern obtained in the diffraction image. A detailed analysis of those will be taken up in another experiment.  <br>
+        <img src="images/fig3.PNG"><br>
+        Fig. 4: a) Bright field image and b) selected area diffraction for a ceramic sample in transmission electron microscopy. <br></div></p>
+        
+        </div>
+      </div>
+    </div>
+    <footer class="text-light pt-2 vlabs-footer d-flex flex-column">
+      <div class="row px-5">
+        <div class="col d-flex flex-column">
+          <span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">Community Links</span>
+          <a href="http://www.sakshat.ac.in/" class="text-light">Sakshat Portal</a>
+          <a href="http://outreach.vlabs.ac.in/" class="text-light">Outreach Portal</a>
+          <a href="http://vlab.co.in/faq" class="text-light">FAQ: Virtual Labs</a>
+        </div>
+        <div class="col d-flex flex-column">
+          <span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">Contact Us</span>
+          <span> Phone: General Information: 011-26582050 </span>
+          <span> Email: support@vlabs.ac.in </span>
+        </div>
+        <div class="col d-flex flex-column">
+          <span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">Follow Us</span>
+          <div class="social-links">
+    	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #55acee;" href="https://twitter.com/TheVirtualLabs">
+    	  <i class="fa fa-twitter"></i>
+    	</a>
+    	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #3b5998;" href="https://www.facebook.com/Virtual-Labs-IIT-Delhi-301510159983871/">
+    	  <i class="fa fa-facebook"></i>
+    	</a>
+    	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #e52d27;" href="https://www.youtube.com/watch?v=asxRaOgk6a0">
+    	  <i class="fa fa-youtube"></i>
+    	</a>
+    	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #2867B2;" href="https://in.linkedin.com/in/virtual-labs-008ba9136">
+    	  <i class="fa fa-linkedin"></i>
+    	</a>
+          </div>
+        </div>
+      </div>
+      <div class="m-0 py-2 text-center" style='font-family: "Open Sans", sans-serif; background: #212121;'>
+        <a class="text-primary font-weight-bold" href="https://www.gnu.org/licenses/agpl-3.0.en.html"> AGPL 3.0 </a>
+        &nbsp;&amp;&nbsp;
+        <a class="text-primary font-weight-bold" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"> Creative Commons (CC BY-NC-SA 4.0) </a>
+      </div>
+    </footer>
+
+      <script src="./assets/js/toggleSidebar.js"></script>
+      
+  </body>
+</html>
